@@ -1,0 +1,15 @@
+{
+  "name": "stockclear-monorepo",
+  "version": "1.0.0",
+  "description": "StockClear - Omnichannel Dead-Stock Intelligence SaaS",
+  "scripts": {
+    "dev:web": "npm --prefix web run dev",
+    "dev:api": "cd api && .venv/bin/uvicorn main:app --reload --port 8000",
+    "build:web": "npm --prefix web run build",
+    "seed": "PYTHONPATH=api api/.venv/bin/python api/seed.py",
+    "test:api": "api/.venv/bin/python scripts/test_api.py"
+  },
+  "keywords": ["inventory", "dead-stock", "fastapi", "nextjs", "saas"],
+  "author": "StockClear Team",
+  "license": "MIT"
+}
